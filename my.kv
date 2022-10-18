@@ -1,0 +1,187 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+
+<MainWindow>:
+    name: "main"
+    passw:passw
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'magic.png'
+
+
+    GridLayout:
+        cols:1
+        Label:
+            text: ""
+
+
+        Label:
+            text: ""
+            size_hint: 0.5,0.5
+
+        GridLayout:
+            cols:2
+            size_hint: 0.5,0.3
+
+            Label:
+                text: "Размер матрицы (до 40): "
+                font_size: 30
+                bold:True
+                color: (116/255, 18/255, 8/255, 1)
+
+            TextInput:
+                id: passw
+                multiline: False
+                input_filter: "int"
+                padding: 20
+                font_size: 20
+
+        Label:
+            text: ""
+            size_hint: 0.1,0.1
+
+        Button:
+            text: ""
+            background_normal: "ok.png"
+            background_down: "ok1.png"
+            font_size: 60
+            spacing: 10
+            size_hint: 0.5,0.5
+            bold:True
+            on_press:
+                root.pressed()
+                root.min_sum()
+            on_release:
+                app.root.current = "second" if passw.text!="" and int(passw.text)>0 and int(passw.text)<=40 else "main"
+                root.manager.transition.direction="left"
+                root.delete()
+
+
+<SecondWindow>:
+    name: "second"
+    size_label:size_label
+    label_change:label_change
+    slider_label:slider_label
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'fon.jpg'
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
+
+        Accordion:
+            orientation: "vertical"
+
+            AccordionItem:
+                title: "Дальше"
+                Label:
+                    text:"                  Вы согласны \n   с выбранными настройками?"
+                    font_size: 20
+                Button:
+                    text:""
+                    background_normal: "da.png"
+                    background_down: "da1.png"
+                    on_press:
+                        root.count()
+                        root.next()
+                    on_release:
+                        app.root.current = "third"
+                        root.manager.transition.direction="left"
+                        root.delete1()
+
+
+
+            AccordionItem:
+                title: "Минимальная сумма"
+                Button:
+                    text:""
+                    background_normal: "button.png"
+                    background_down: "button1.png"
+                    on_press:
+                        root.show()
+                Label:
+                    id: size_label
+            AccordionItem:
+                title: "Изменить сумму"
+                Label:
+                    id: slider_label
+                    text: "Увеличение \n  суммы в"
+                    font_size: 35
+                    bold: True
+                    color:"#22142b"
+                    canvas.before:
+                        Color:
+                            rgba: 197/255, 180/255, 188/255, 0.5
+                        Rectangle:
+                            pos: 50,163
+                            size: 280,190
+
+                Slider:
+                    min:2
+                    max:50
+                    step:1
+                    orientation: "horizontal"
+                    on_value: root.slide_it(*args)
+                Button:
+                    text: "Ok"
+                    background_normal: "ok2.png"
+                    background_down: "ok21.png"
+                    size_hint: 0.5, 0.3
+                    font_size: 40
+                    bold: True
+                    pos_hint: {"center_x":.7, "center_y":.5}
+                    on_press:
+                        root.change()
+                    on_release:
+                        app.root.current = "second" if slider_label.text!="Увеличение \n  суммы в" and int(slider_label.text)>=2 else "second"
+            AccordionItem:
+                title: "Сумма"
+                Label:
+                    id: label_change
+                    font_size: 40
+                    bold: True
+                    color:"#22142b"
+                    canvas.before:
+                        Color:
+                            rgba: 197/255, 180/255, 188/255, 0.5
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+<ThirdWindow>:
+    name: "third"
+    print_label:print_label
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: '3.png'
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 30
+        spacing: 10
+        Label:
+            id:print_label
+
+
+        Button:
+            text: "Ещё раз"
+            background_normal: "again.png"
+            background_down: "again2.png"
+            size_hint: 0.2, 0.2
+            font_size: 30
+            bold: True
+            pos_hint: {"center_x": .5, "center_y":.2}
+            on_release:
+                app.root.current = "main"
+                root.delete2()

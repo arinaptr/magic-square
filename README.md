@@ -30,6 +30,7 @@ The "Magic Square" program is designed to generate magic squares based on user i
    ```shell
    pip install kivy
    ```
+   
 4. Run the program:
 
   ```shell

@@ -19,11 +19,11 @@ The "Magic Square" program is designed to generate magic squares based on user i
 
    ```shell
    cd magic-square
-    ```
-    
+   ```  
+ 
 3. Install the required dependencies:
-
-  ```shell
+   
+   ```shell
    pip install numpy
    ```
    

@@ -60,7 +60,8 @@ The "Magic Square" program is designed to generate magic squares based on user i
 - Displays the generated magic square.
 - Provides a button to repeat the process and return to the Main Window.
 
-<img src="img/third-image.png" alt="Image Description" width="300" height="200">
+<img src="img/third-page.png" alt="Third Page" width="200" height="200">
+<!-- ![Third Page](img/third-page.png) -->
 
 # Program Code
 The program code is written in Python and utilizes the Kivy library for the graphical user interface. It consists of several classes representing different screens/windows and their corresponding functions. The code utilizes a combination of layouts, labels, buttons, and text input fields to implement the user interface.

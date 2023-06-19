@@ -14,19 +14,24 @@ The "Magic Square" program is designed to generate magic squares based on user i
    ```shell
    git clone https://github.com/your-username/magic-square.git
     ```
+    
 2. Change to the project directory:
 
    ```shell
    cd magic-square
     ```
+    
 3. Install the required dependencies:
+
   ```shell
    pip install numpy
    ```
+   
    ```shell
    pip install kivy
    ```
 4. Run the program:
+
   ```shell
   python main.py
   ```
@@ -55,7 +60,7 @@ The "Magic Square" program is designed to generate magic squares based on user i
 - Displays the generated magic square.
 - Provides a button to repeat the process and return to the Main Window.
 
-![Third Page](img/third-page.png)
+<img src="img/third-image.png" alt="Image Description" width="300" height="200">
 
 # Program Code
 The program code is written in Python and utilizes the Kivy library for the graphical user interface. It consists of several classes representing different screens/windows and their corresponding functions. The code utilizes a combination of layouts, labels, buttons, and text input fields to implement the user interface.

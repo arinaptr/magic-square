@@ -44,7 +44,10 @@ The "Magic Square" program is designed to generate magic squares based on user i
 - Validates the input and calculates the minimum sum based on the size.
 - Clicking on the "Next" button transitions to the Second Window.
 
-![First Page](img/first-page.png)
+<p align="center">
+  <img src="img/first-page.png" alt="First Page" width="400" height="400">
+</p>
+<!-- ![First Page](img/first-page.png) -->
 
 ## Second Window
 - Displays the calculated minimum sum.
@@ -53,14 +56,19 @@ The "Magic Square" program is designed to generate magic squares based on user i
 - Clicking on the "Next" button transitions to the Third Window.
 - Clicking on the "Reset" button resets the inputs and returns to the Main Window.
 
-![Second Page](img/second-page.png)
+<p align="center">
+  <img src="img/second-page.png" alt="Second Page" width="400" height="400">
+</p>
+<!-- ![Second Page](img/second-page.png) -->
 
 ## Third Window
 - Generates the magic square based on the user-defined parameters.
 - Displays the generated magic square.
 - Provides a button to repeat the process and return to the Main Window.
 
-<img src="img/third-page.png" alt="Third Page" width="200" height="200">
+<p align="center">
+  <img src="img/third-page.png" alt="Third Page" width="400" height="400">
+</p>
 <!-- ![Third Page](img/third-page.png) -->
 
 # Program Code

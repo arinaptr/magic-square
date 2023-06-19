@@ -34,8 +34,8 @@ The "Magic Square" program is designed to generate magic squares based on user i
 4. Run the program:
 
   ```shell
-  python main.py
-  ```
+   python main.py
+   ```
  
  # Program Functionality
  
